@@ -17,25 +17,28 @@ potential_3 = potential(charges_3, 5, 5);
 
 % plot electric potential distribution
 plot_potential(potential_1)
-plot_potential(potential_2)
-plot_potential(potential_3)
+% plot_potential(potential_2)
+% plot_potential(potential_3)
 
 % plot potential contours
 plot_contours(charges_1, 0.02, 0.02, 200, 2000);
-plot_contours(charges_2, 5, 5, -25, 25);
-plot_contours(charges_3, 5, 5, 0, 200);
+% plot_contours(charges_2, 5, 5, -25, 25);
+% plot_contours(charges_3, 5, 5, 0, 200);
 
 % plot electric field streamlines and potential contours
 plot_contours_streamlines(charges_1, 0.02, 0.02, 200, 2000);
-plot_contours_streamlines(charges_2, 5, 5, -25, 25);
-plot_contours_streamlines(charges_3, 5, 5, 0, 200);
-
-% hold off
+% plot_contours_streamlines(charges_2, 5, 5, -25, 25);
+% plot_contours_streamlines(charges_3, 5, 5, 0, 200);
 
 % plot potential field streamlines represented in unified arrows and contours
 plot_contours_streamlines_arrow(charges_1, 0.02, 0.02, 200, 2000);
-plot_contours_streamlines_arrow(charges_2, 5, 5, -25, 25);
-plot_contours_streamlines_arrow(charges_3, 5, 5, 0, 200);
+% plot_contours_streamlines_arrow(charges_2, 5, 5, -25, 25);
+% plot_contours_streamlines_arrow(charges_3, 5, 5, 0, 200);
+
+% save all the figures
+for index = 1:12
+    exportgraphics(get(1, 'CurrentAxes'), ['experiment_1_figure_', num2str(index), '.png'], 'Resolution', 600)
+end
 
 %% potential
 function V = potential(charges, xm, ym)
