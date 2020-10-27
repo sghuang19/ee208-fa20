@@ -18,6 +18,4 @@ plot(y)
 figure
 plot(3, 3, '*')
 
-F = getframe(2);
-% close(F)
-% close(1)
+print()
