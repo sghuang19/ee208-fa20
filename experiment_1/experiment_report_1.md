@@ -468,30 +468,50 @@ for index = 1:12
 end
 ```
 
-## Plots
+## Plots and Analysis
 
-The plots generated are shown below.
+This part shows the plots generated and correspondingly their analysis.
+
+### Point Charge Distribution 1
+
+In the first case, two positive points charges with the same charge amount are introduced. Therefore, all of the four plots shows symmetry with respect to the $y$-axis. The potential shows two peaks in the plot, which goes to infinity at the points where the charges are located.
 
 ![Figure 1](experiment_1_figure_1.png)
 
-![Figure 2](experiment_1_figure_2.png)
-
-![Figure 3](experiment_1_figure_3.png)
-
 ![Figure 4](experiment_1_figure_4.png)
 
-![Figure 5](experiment_1_figure_5.png)
-
-![Figure 6](experiment_1_figure_6.png)
+As for the electric field intensity, the streamlines are all starts from the two charges, pointing outwards.
 
 ![Figure 7](experiment_1_figure_7.png)
 
-![Figure 8](experiment_1_figure_8.png)
-
-![Figure 9](experiment_1_figure_9.png)
-
 ![Figure 10](experiment_1_figure_10.png)
 
+### Point Charge Distribution 2
+
+Case 2 is similar to case 1, except that a point charge is switched to a negative one.
+
+As a result, on the plot, the potential shows a peak for positive infinity and a valley for negative infinity.
+
+![Figure 2](experiment_1_figure_2.png)
+
+The contours plot is similar to two group of concentric circles "squeezing" each other. Notice that, the $y$-axis itself also becomes a contour line with infinity radius.
+
+![Figure 5](experiment_1_figure_5.png)
+
+As for the electric field intensity, the streamlines, or more intuitively for the arrows, are all forming a path from the positive charge to the negative one.
+
+![Figure 8](experiment_1_figure_8.png)
+
 ![Figure 11](experiment_1_figure_11.png)
+
+### Point Charge Distribution 3
+
+Case 3 is also similar to case 1, but with one additional identical point charge. Hence, in the plots, three peaks and three centers are exhibited.
+
+![Figure 3](experiment_1_figure_3.png)
+
+![Figure 6](experiment_1_figure_6.png)
+
+![Figure 9](experiment_1_figure_9.png)
 
 ![Figure 12](experiment_1_figure_12.png)
