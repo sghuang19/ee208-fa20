@@ -37,5 +37,5 @@ plot_contours_streamlines_arrow(charges_3, 5, 5, 0, 200);
 
 % save all the figures
 for index = 1:12
-    exportgraphics(get(1, 'CurrentAxes'), ['experiment_1_figure_', num2str(index), '.png'], 'Resolution', 600)
+    exportgraphics(get(index, 'CurrentAxes'), ['experiment_1_figure_', num2str(index), '.png'], 'Resolution', 600)
 end
