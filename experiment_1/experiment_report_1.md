@@ -47,7 +47,7 @@ Inside the function, firstly, the $x$-coordinates in the range are evenly divide
 
 >The meshgrid is set to have size of 50 by 50, in order to achieve the relatively best appearance for all 4 figures needed to be accomplished in this experiment.
 
-Afterward, the distance between each of the point charges to, and hence the potential due to each of them at any points in the meshgrid are calculated iteratively within `for` loop, then summed to form the return.
+Afterwards, the distance between each of the point charges to, and hence the potential due to each of them at any points in the meshgrid are calculated iteratively within `for` loop, then summed to form the return.
 
 >Due to the same limitation mentioned above, calculation inside functions is also based on the `cell` type.
 
@@ -188,10 +188,10 @@ function plot_contours(charges, xm, ym, Vmin, Vmax)
     %   Vmax - the maximum potential value for a family of equipotential lines
 
     V = potential(charges, xm, ym);
-    % set the potential for 10 equipotential lines
+    % set the potential for 30 equipotential lines
     Veq = linspace(Vmin, Vmax, 30);
 
-    % plot 20 equipotential lines
+    % plot 30 equipotential lines
     figure
     contour(V{2}, V{3}, V{1}, Veq);
     % form a grid
@@ -236,7 +236,7 @@ This function is invoked as `plot_potential_contours_streamlines(charges, xm, ym
 
 This function utilized `potential()` to find the potential distribution, and then `gradient()` to calculate the electric field intensity.
 
-A series of radian value `theta` is formed to obtain a set of start points of streamlines. To improve appearance of our plots, the streamlines should not all start at the charges. Instead, we use trigonometric functions to generate a series of start points that are at a specific distance, in our case, one tenth of the range from the charges.
+A series of radian value `theta` is formed to obtain a set of start points of streamlines. To improve appearance of our plots, the streamlines should not all start at the charges. Instead, we use trigonometric functions to generate a series of start points that are at a specific distance, in our case, one twentieth of the range from the charges.
 
 ```matlab
     for index = 1:size(charges, 1)
@@ -273,9 +273,9 @@ function plot_contours_streamlines(charges, xm, ym, Vmin, Vmax)
     % form a grid
     grid on
 
-    % set the potential for 20 equipotential lines
+    % set the potential for 30 equipotential lines
     Veq = linspace(Vmin, Vmax, 30);
-    % plot 20 equipotential lines
+    % plot 30 equipotential lines
     contour(V{2}, V{3}, V{1}, Veq);
     % hold the plot
     hold on
@@ -413,7 +413,7 @@ charges_3 = [8e-9, -sqrt(3), -1; 8e-9 sqrt(3) -1; 8e-9, 0, 2];
 
 The following work then would be trivial, just calling the functions we have already defined.
 
-One last novel work is that, we use a `for` loop to save all the plots generated. In each iteration, we use the `index` as the handle to te figure window, then obtain the axis area with `get(index, 'CurrentAxes')`. Then, the plots are saved to the directory by `exportgraphics()` function with a certain file name.
+One last novel work is that, we use a `for` loop to save all the plots generated. In each iteration, we use the `index` as the handle to the figure window, then obtain the axis area with `get(index, 'CurrentAxes')`. Then, the plots are saved to the directory by `exportgraphics()` function with a certain file name.
 
 ```matlab
 % save all the figures
