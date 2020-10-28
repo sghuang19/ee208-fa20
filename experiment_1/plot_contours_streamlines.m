@@ -1,6 +1,6 @@
 function plot_contours_streamlines(charges, xm, ym, Vmin, Vmax)
     % plot_contours_streamlines - to plot the contours distribution
-    % input aruguments -
+    % input arguments -
     %   charges - a matrix with 3 rows,
     %            row 1 indicates point charge amount;
     %            row 2 indicates x-coordinate;
