@@ -1,6 +1,6 @@
 function plot_contours_streamlines_arrow(charges, xm, ym, Vmin, Vmax)
     % plot_contours_streamlines - to plot the contours distribution
-    % input aruguments -
+    % input arguments -
     %   charges - a matrix with 3 rows,
     %            row 1 indicates point charge amount;
     %            row 2 indicates x-coordinate;
@@ -28,7 +28,7 @@ function plot_contours_streamlines_arrow(charges, xm, ym, Vmin, Vmax)
         Ey(1:s:end, 1:s:end))
     hold on
 
-    % set the potential for 20 equipotential lines
+    % set the potential for 30 equipotential lines
     Veq = linspace(Vmin, Vmax, 30);
     % plot the equipotential lines
     contour(V{2}, V{3}, V{1}, Veq)
