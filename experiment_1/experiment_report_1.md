@@ -29,7 +29,7 @@ This parameter is for the charge distribution, it is a matrix with 3 rows and th
 This parameter represents the maximum absolute value of the $x$-coordinates on which the potential is calculated. In another word, the range we are concerned along the $x$-axis is $[-x_m, x_m]$.
 
 - `ym`
-Similar to `xm`, but along te $y$-axis.
+Similar to `xm`, but along the $y$-axis.
 
 ### Returns
 
