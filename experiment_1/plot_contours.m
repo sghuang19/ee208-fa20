@@ -1,7 +1,7 @@
 %% plot_contours
 function plot_contours(charges, xm, ym, Vmin, Vmax)
     % plot_contours - to plot the contours distribution
-    % input aruguments -
+    % input arguments -
     %   charges - a matrix with 3 rows,
     %            row 1 indicates point charge amount
     %            row 2 indicates x-coordinate
@@ -12,7 +12,7 @@ function plot_contours(charges, xm, ym, Vmin, Vmax)
     %   Vmax - the maximum potential value for a family of equipotential lines
 
     V = potential(charges, xm, ym);
-    % set the potential for 10 equipotential lines
+    % set the potential for 30 equipotential lines
     Veq = linspace(Vmin, Vmax, 30);
 
     % plot 20 equipotential lines
@@ -32,7 +32,9 @@ function plot_contours(charges, xm, ym, Vmin, Vmax)
 
     title('Isopotential lines of point charge(s) electric field in vacuum');
     % title the plot
-    xlabel('X axis (unit: m)', 'fontname', 'Times New Roman'); % label the x axis
-    ylabel('Y axis (unit: m)', 'fontname', 'Times New Roman'); % label the y axis
+    % label the x axis
+    xlabel('X axis (unit: m)', 'fontname', 'Times New Roman');
+    % label the y axis
+    ylabel('Y axis (unit: m)', 'fontname', 'Times New Roman');
 
 end
