@@ -111,9 +111,11 @@ end
 
 ## Function `plot_potential()`
 
-This function takes the input of `potential()`, then generates a figure using `mesh()`. The complete source code of this function is shown in the following code block.
+This function is invoked as `plot_potential(V)`, takes in a potential distribution `V`, which is a result of `potential()`, then generates a figure using `mesh()`.
 
 >Since there's a line of `figure` command, each time this function runs, a new figure window is generated.
+
+The complete source code of this function is shown in the following code block.
 
 ```matlab
 %% plot_potential
