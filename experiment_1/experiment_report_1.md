@@ -138,3 +138,79 @@ function plot_potential(V)
     ylabel('Y axis (unit: m)', 'fontname', 'Times New Roman');
 end
 ```
+
+---
+
+## Function `plot_potential_contours()`
+
+This function takes the input of `potential()`, then generates a figure using `mesh()`. The complete source code of this function is shown in the following code block.
+
+>All the functions for plotting figures are similar, invocation would lead to the generation of new figure windows.
+
+### Parameters
+
+This function is invoked as `plot_potential_contours(charges, xm, ym, Vmin, Vmax)`.
+
+>The parameters of the same notation are identical for each functions, therefore won't be repeatedly explained in the following content.
+
+- `charges`
+- `xm`
+- `ym`
+- `Vmin`
+The minimum potential value for a family of equipotential lines.
+- `Vmax`
+The maximum potential value for a family of equipotential lines.
+
+### Detailed Explanation
+
+Inside the function, the potential distribution is calculated first by invoking `potential()`. Then, a family of equipotential values are formed with command `Veq = linspace(Vmin, Vmax, 30);`. The figure is then plotted with `contour()` function. In the end, the location of the point charges are also labeled iteratively.
+
+>The amounts of equipotential lines is set to be 30 to improve appearance.
+
+### Source Code
+
+The complete source code of this function is shown in the following code block.
+
+```matlab
+%% plot_contours
+function plot_contours(charges, xm, ym, Vmin, Vmax)
+    % plot_contours - to plot the contours distribution
+    % input arguments -
+    %   charges - a matrix with 3 rows,
+    %            row 1 indicates point charge amount
+    %            row 2 indicates x-coordinate
+    %            row 3 indicates y-coordinate
+    %   xm - the range of the field in x direction
+    %   ym - the range of the field in y direction
+    %   Vmin - the minimum potential value for a family of equipotential lines
+    %   Vmax - the maximum potential value for a family of equipotential lines
+
+    V = potential(charges, xm, ym);
+    % set the potential for 10 equipotential lines
+    Veq = linspace(Vmin, Vmax, 30);
+
+    % plot 20 equipotential lines
+    figure
+    contour(V{2}, V{3}, V{1}, Veq);
+    % form a grid
+    grid on
+    % hold the plot
+    hold on
+
+    % plot the charges
+    for index = 1:size(charges, 1)
+        x = charges(index, 2);
+        y = charges(index, 3);
+        plot(x, y, '*', 'MarkerSize', 12)
+    end
+
+    title('Isopotential lines of point charge(s) electric field in vacuum');
+    % title the plot
+    % label the x axis
+    xlabel('X axis (unit: m)', 'fontname', 'Times New Roman');
+    % label the y axis
+    ylabel('Y axis (unit: m)', 'fontname', 'Times New Roman');
+
+end
+```
+
