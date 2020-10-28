@@ -2,6 +2,8 @@
 
 This is the report fo the first experiment of Engineering Electromagnetic Field course, written by HUANG Guanchao, SID 11912309 from SME. The complete resources of this experiment, including `.m` source code, report in `.md`, `.pdf` format and all the figures can be retrieved at [my GitHub repo](https://github.com/SamuelHuang2019/EEF-lab/tree/main/experiment_1).
 
+>These works are done with MATLAB 2020b and VSCode.
+
 [toc]
 
 ---
