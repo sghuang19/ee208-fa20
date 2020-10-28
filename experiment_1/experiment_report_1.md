@@ -230,7 +230,28 @@ This function is invoked as `plot_potential_contours_streamlines(charges, xm, ym
 - `Vmin`
 - `Vmax`
 
+### Detailed Explanation
+
+This function utilized `potential()` to find the potential distribution, and then `gradient()` to calculate the electric field intensity.
+
+A series of radian value `theta` is formed to obtain a set of start points of streamlines. To improve appearance of our plots, the streamlines should not all start at the charges. Instead, we use trigonometric functions to generate a series of start points that are at a specific distance, in our case, one tenth of the range from the charges.
+
+```matlab
+    for index = 1:size(charges, 1)
+        % generate the x coordinate for the start of the field line
+        x = charges(index, 2);
+        xs = [xs, x + xm / 20 * cos(theta)];
+        % generate the x coordinate for the start of the field line
+        y = charges(index, 3);
+        ys = [ys, y + ym / 20 * sin(theta)];
+    end
+```
+
+However, such procedure still can not deal with negative charges, since streamlines ends on them instead of starting.
+
 ### Source Code
+
+The complete source code of this function is shown in the following code block.
 
 ```matlab
 function plot_contours_streamlines(charges, xm, ym, Vmin, Vmax)
