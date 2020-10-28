@@ -55,7 +55,7 @@ Afterward, the distance between each of the point charges to, and hence the pote
 
 The complete source code of this function is shown in the following code block.
 
->`k` is a global variable defined outside of the function block, representing the free space permittivity.
+>`k` is a global variable defined outside of the function block, representing the electrostatic constant.
 
 ```matlab
 %% potential
