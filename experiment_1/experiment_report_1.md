@@ -45,9 +45,11 @@ This function returns a **cell** of three matrices, noted as `V`.
 
 Inside the function, firstly, the $x$-coordinates in the range are evenly divided to 50 segments with command `x = linspace(-xm, xm, 50);`, stored in a row vector. Then the same for the $y$-coordinates. Based on this, the meshgrid is generated as `[X, Y] = meshgrid(x, y);`
 
+>The meshgrid is set to have size of 50 by 50, in order to achieve the relatively best appearance for all 4 figures needed to be accomplished in this experiment.
+
 Afterward, the distance between each of the point charges to, and hence the potential due to each of them at any points in the meshgrid are calculated iteratively within `for` loop, then summed to form the return.
 
->Due to the same limitation mentioned above, calculation inside is also based on the `cell` type.
+>Due to the same limitation mentioned above, calculation inside functions is also based on the `cell` type.
 
 ### Source Code
 
