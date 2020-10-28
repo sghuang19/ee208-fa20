@@ -214,6 +214,22 @@ function plot_contours(charges, xm, ym, Vmin, Vmax)
 end
 ```
 
+---
+
+## Function `plot_potential_contours_streamlines()`
+
+This function is for plotting the contours of electric field potential and the electric field streamlines due to one or more charges.
+
+### Parameters
+
+This function is invoked as `plot_potential_contours_streamlines(charges, xm, ym, Vmin, Vmax)`.
+
+- `charges`
+- `xm`
+- `ym`
+- `Vmin`
+- `Vmax`
+
 ### Source Code
 
 ```matlab
