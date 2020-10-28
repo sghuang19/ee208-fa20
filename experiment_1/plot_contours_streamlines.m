@@ -57,7 +57,7 @@ function plot_contours_streamlines(charges, xm, ym, Vmin, Vmax)
     end
 
     % title the plot
-    title({('Isopotential lines and power lines of point Charge(s) electric field in vacuum'); ...
+    title({('Isopotential lines and power lines of point charge(s) electric field in vacuum'); ...
             ('(Expressed by Smooth Continuous Curves)')}, 'fontsize', 12)
     % label the x axis
     xlabel('X axis(unit: m)', 'fontsize', 12, 'fontname', 'Times New Roman')
