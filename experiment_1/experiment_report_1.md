@@ -469,3 +469,29 @@ end
 ```
 
 ## Plots
+
+The plots generated are shown below.
+
+![Figure 1](experiment_1_figure_1.png)
+
+![Figure 2](experiment_1_figure_2.png)
+
+![Figure 3](experiment_1_figure_3.png)
+
+![Figure 4](experiment_1_figure_4.png)
+
+![Figure 5](experiment_1_figure_5.png)
+
+![Figure 6](experiment_1_figure_6.png)
+
+![Figure 7](experiment_1_figure_7.png)
+
+![Figure 8](experiment_1_figure_8.png)
+
+![Figure 9](experiment_1_figure_9.png)
+
+![Figure 10](experiment_1_figure_10.png)
+
+![Figure 11](experiment_1_figure_11.png)
+
+![Figure 12](experiment_1_figure_12.png)
