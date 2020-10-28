@@ -143,7 +143,7 @@ end
 
 ## Function `plot_potential_contours()`
 
-This function takes the input of `potential()`, then generates a figure using `mesh()`. The complete source code of this function is shown in the following code block.
+This function is for plotting the contours of electric field potential due to one or more charges.
 
 >All the functions for plotting figures are similar, invocation would lead to the generation of new figure windows.
 
