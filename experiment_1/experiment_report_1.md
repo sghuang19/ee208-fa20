@@ -109,7 +109,9 @@ end
 
 ## Function `plot_potential()`
 
-### Source Code
+This function takes the input of `potential()`, then generates a figure using `mesh()`. The complete source code of this function is shown in the following code block.
+
+>Since there's a line of `figure` command, each time this function runs, a new figure window is generated.
 
 ```matlab
 %% plot_potential
@@ -120,11 +122,9 @@ function plot_potential(V)
     %      the first indicates the x-coordinate of the meshgrid
     %      the second indicates the y-coordinate of the meshgrid
     %      the third indicates the potential at each points in the range
-    %   xm - the range of the field in x direction
-    %   ym - the range of the field in y direction
 
     figure
-    mesh(V{2}, V{3}, V{1});
+    mesh(V{2}, V{3}, V{1})
 
     % The title for the plot(Note that all symbols should be half-angled English characters )
     title("The plot of electric potential distribution of point charge(s) in the vacuum");
